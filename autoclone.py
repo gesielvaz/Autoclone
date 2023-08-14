@@ -21,7 +21,7 @@ def clone_repositories(repositories):
 
 # Colocar os links completos dos repositórios que deseja clonar abaixo
 repositories = [
-    "https://github.com/ErpExo/purchase-api.git",
+    "https://seurepositoriogit",
     # Adicione mais URLs de repositórios aqui
 ]
 
