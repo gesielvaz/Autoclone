@@ -1,5 +1,12 @@
 import os
 from git import Repo
+import requests
+
+# Obter o token de acesso do ambiente
+github_token = os.getenv("TOKEN")
+headers = {
+    "Authorization": f"Bearer {github_token}"
+}
 
 def clone_repositories(repositories):
     for repository_url in repositories:
@@ -12,10 +19,10 @@ def clone_repositories(repositories):
         Repo.clone_from(repository_url, folder_path)
         print(f"Repositório {repository_name} clonado com sucesso!")
 
-#Colocar os links dos repositorios que deseja clonar abaixo
+# Colocar os links completos dos repositórios que deseja clonar abaixo
 repositories = [
-    "https://github.com/seuRepositorio.git",
-    
+    "https://github.com/ErpExo/purchase-api.git",
+    # Adicione mais URLs de repositórios aqui
 ]
 
 clone_repositories(repositories)
